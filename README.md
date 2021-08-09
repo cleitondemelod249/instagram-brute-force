@@ -6,6 +6,6 @@
 
 - `pip install -r requirements.txt`
 
-- Enter the username and Dictionary |WORDLIST without extension file|
+- Enter the username and Dictionary `WORDLIST without extension file`
 
 - application developed in python

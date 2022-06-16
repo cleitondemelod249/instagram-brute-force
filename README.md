@@ -1,11 +1,13 @@
 # INSTAGRAM BRUTE FORCE - WORDLIST
 
-- [UNDER DEVELOPMENT] **
+> #### [ UNDER DEVELOPMENT ] **
+> ###### USE FOR ACADEMIC PURPOSES ONLY. THE MISUSE OF THIS TOOL IS NOT MY RESPONSIBILITY.
+> ###### Application developed in python
 
-- USE FOR ACADEMIC PURPOSES ONLY. THE MISUSE OF THIS TOOL IS NOT MY RESPONSIBILITY
+## How to install
+`pip install -r requirements.txt`
 
-- `pip install -r requirements.txt`
+## How to use
+> ###### Create a new character list `echo 1234567890abcdef > chars.txt`
 
-- Enter the username and Dictionary `WORDLIST without extension file`
-
-- application developed in python
+> ###### Run the python Script `python instagram-brute-force.py`

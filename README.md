@@ -8,6 +8,7 @@
 `pip install -r requirements.txt`
 
 ## How to use
-> ###### Create a new character list `echo 1234567890abcdef > chars.txt`
 
-> ###### Run the python Script `python instagram-brute-force.py`
+> ###### Run the python Script `python instagram-brute-force.py {insta_username} {chars_min} {chars_max} {chars_list}`
+
+> ###### Example: `python instagram-brute-force.py zuck 6 8 1234567890abcdef`

